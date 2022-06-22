@@ -12,4 +12,4 @@ jobs:
     uses: sudarsana-reddy/qa-maven-poj/.github/workflows/reusable.yml@main
     with:
       testSuite: testSuites/regression.xml
-    secrets: inherit1 * * * *
+    secrets: inherit
