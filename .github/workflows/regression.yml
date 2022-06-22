@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build_smoke_test:
+  build_regression_test:
     uses: sudarsana-reddy/qa-maven-poj/.github/workflows/reusable.yml@main
     with:
       testSuite: testSuites/regression.xml
