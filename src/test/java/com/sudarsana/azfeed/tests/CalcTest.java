@@ -13,9 +13,14 @@ public class CalcTest {
     }
 
     @Test
-    public void testMultifly(){
+    public void testMultiply(){
         int result = new Calculator().multiply(2,3);
         Assert.assertEquals(result, 6, "Expected 2 * 3 as 6");
+    }
+
+    @Test
+    public void failTest(){
+        Assert.assertEquals(4, 6, "Expected 2 * 3 as 6");
     }
 
 }
