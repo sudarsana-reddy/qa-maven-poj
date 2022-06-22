@@ -34,7 +34,11 @@ jobs:
         path: target
         
     - name: Publish Test Results
-      uses: mikepenz/action-junit-report@v3
-      if: always() # always run even if the previous step fails
+      uses: dorny/test-reporter@v1
+      if: always()
       with:
-        report_paths: "**/target/**/TEST-*.xmll"
+        name: Maven Tests
+        path: target/**/TEST-*.xml
+        reporter: java-junit
+        fail-on-error: true
+       
