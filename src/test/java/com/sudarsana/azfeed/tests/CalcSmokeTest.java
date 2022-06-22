@@ -18,9 +18,4 @@ public class CalcSmokeTest {
         Assert.assertEquals(result, 6, "Expected 2 * 3 as 6");
     }
 
-    @Test
-    public void smokeFailTest(){
-        Assert.assertEquals(4, 6, "Expected 2 * 3 as 6");
-    }
-
 }
