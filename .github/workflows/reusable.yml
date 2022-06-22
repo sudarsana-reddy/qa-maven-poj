@@ -4,10 +4,15 @@
 name: Java CI with Maven
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
+    inputs:
+      testSuite:
+        required: true
+        type: string
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
 
 jobs:
   build_test:
@@ -25,7 +30,7 @@ jobs:
         cache: maven
         
     - name: Build with Maven
-      run: mvn clean test -Dmaven.test.failure.ignore=true
+      run: mvn clean test -Dmaven.test.failure.ignore=true -DsuiteXmlFile=${{inputs.testSuite}}
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
