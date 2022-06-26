@@ -48,6 +48,6 @@ jobs:
           fail-on-error: true
 
       - name: Publish to GitHub Registry
-        run: mvn deploy -DskipTests=true
+        run: mvn clean deploy -DskipTests=true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
