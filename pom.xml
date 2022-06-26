@@ -14,6 +14,14 @@
         <testSuite>smoke.xml</testSuite>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/sudarsana-reddy/qa-maven-proj</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
