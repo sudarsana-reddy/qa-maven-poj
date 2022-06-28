@@ -14,6 +14,7 @@ public class CalcSmokeTest {
 
     @Test
     public void smokeTestMultiply(){
+        //This is a multiplication test validation
         int result = new Calculator().multiply(2,3);
         Assert.assertEquals(result, 6, "Expected 2 * 3 as 6");
     }
