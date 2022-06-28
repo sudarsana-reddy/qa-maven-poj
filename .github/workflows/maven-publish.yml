@@ -3,14 +3,13 @@
 
 name: Maven Package
 
-on:
-  release:
-    types: [created]
+on: [workflow_dispatch]
+  
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, sud-win-runner1]
     permissions:
       contents: read
       packages: write
