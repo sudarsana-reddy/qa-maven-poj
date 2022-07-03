@@ -44,5 +44,6 @@ runs:
 
       - name: Publish to GitHub Registry
         run: mvn clean deploy -DskipTests=true
+        shell: bash
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
