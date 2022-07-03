@@ -4,7 +4,7 @@
 name: "Composite Action Demo"
 description: "Demo composite action"
 inputs:
-  testSuite:
+  TEST_SUITE:
     required: true
     type: string
     default: "testng.xml"
@@ -27,7 +27,7 @@ runs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn clean package -Dmaven.test.failure.ignore=true -DsuiteXmlFile=${{inputs.testSuite}}
+        run: mvn clean package -Dmaven.test.failure.ignore=true -DsuiteXmlFile=${{inputs. TEST_SUITE}}
         shell: bash
 
       - name: Upload artifacts
