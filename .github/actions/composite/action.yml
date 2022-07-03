@@ -8,6 +8,9 @@ inputs:
     required: true
     type: string
     default: "testng.xml"
+  GTIHUB_TOKEN:
+    required: true
+    type: string  
 
 
 runs:
