@@ -10,7 +10,7 @@ on:
 
 jobs:
   build_smoke_test:
-    uses: ./.github/actions/reusable
+    uses: ./.github/workflows/reusable
     with:
       testSuite: testSuites/smoke.xml
     secrets: inherit
