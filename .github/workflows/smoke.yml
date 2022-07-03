@@ -13,6 +13,11 @@ jobs:
   build_smoke_test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      
+      - name: Check the GitHub Default Varibales
+        run: echo "Github Workspace - $GITHUB_WORKSPACE"
+        
       - uses: ./.github/actions/composite
         with:
           testSuite: testSuites/smoke.xml
