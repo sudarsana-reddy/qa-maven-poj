@@ -10,21 +10,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_smoke_test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Check the GitHub Default Varibales
-        run: echo "Github Workspace - $GITHUB_WORKSPACE"
+  build_smoke_test:  
+    uses: ./.github/workflows/reusable.yml
+    with:
+      testSuite: testSuites/smoke.xml
+    secrets: inherit
         
-      - uses: ./.github/actions/composite
-        with:
-          TEST_SUITE: "testSuites/smoke.xml"
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+#   runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+      
+#       - name: Check the GitHub Default Varibales
+#         run: echo "Github Workspace - $GITHUB_WORKSPACE"
+        
+#       - uses: ./.github/actions/composite
+#         with:
+#           TEST_SUITE: "testSuites/smoke.xml"
+#           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
        
-#     uses: ./.github/workflows/reusable.yml
-#     with:
-#       testSuite: testSuites/smoke.xml
-#     secrets: inherit
+    
 
