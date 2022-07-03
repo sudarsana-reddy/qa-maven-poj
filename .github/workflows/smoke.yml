@@ -10,7 +10,14 @@ on:
 
 jobs:
   build_smoke_test:
-    uses: ./.github/workflows/reusable.yml
-    with:
-      testSuite: testSuites/smoke.xml
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/composite
+        with:
+          testSuite: testSuites/smoke.xml
+       
+#     uses: ./.github/workflows/reusable.yml
+#     with:
+#       testSuite: testSuites/smoke.xml
+#     secrets: inherit
+
