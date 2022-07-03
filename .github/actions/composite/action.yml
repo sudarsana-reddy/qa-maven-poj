@@ -49,4 +49,4 @@ runs:
         run: mvn clean deploy -DskipTests=true
         shell: bash
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{inputs.GITHUB_TOKEN}}
