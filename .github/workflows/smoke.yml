@@ -21,7 +21,7 @@ jobs:
       - uses: ./.github/actions/composite
         with:
           testSuite: "testSuites/smoke.xml"
-          GITHUB_TOKEN: ${{secrest.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
        
 #     uses: ./.github/workflows/reusable.yml
 #     with:
