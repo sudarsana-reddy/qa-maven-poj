@@ -10,7 +10,7 @@ on:
 
 jobs:
   build_smoke_test:
-    uses: sudarsana-reddy/qa-maven-poj/.github/workflows/reusable.yml@main
+    uses: ./.github/actions/reusable
     with:
       testSuite: testSuites/smoke.xml
     secrets: inherit
