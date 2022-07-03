@@ -20,7 +20,7 @@ jobs:
         
       - uses: ./.github/actions/composite
         with:
-          testSuite: testSuites/smoke.xml
+          testSuite: "testSuites/smoke.xml"
        
 #     uses: ./.github/workflows/reusable.yml
 #     with:
