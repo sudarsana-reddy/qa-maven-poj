@@ -25,6 +25,7 @@ runs:
 
       - name: Build with Maven
         run: mvn clean package -Dmaven.test.failure.ignore=true -DsuiteXmlFile=${{inputs.testSuite}}
+        shell: bash
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
